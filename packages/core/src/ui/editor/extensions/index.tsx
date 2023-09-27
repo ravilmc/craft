@@ -48,7 +48,8 @@ export const defaultExtensions = [
     codeBlock: false,
     code: {
       HTMLAttributes: {
-        class: "rounded-md bg-stone-200 px-1.5 py-1 font-mono font-medium text-stone-900",
+        class:
+          "rounded-md bg-stone-200 px-1.5 py-1 font-mono font-medium text-stone-900",
         spellcheck: "false",
       },
     },
@@ -79,7 +80,10 @@ export const defaultExtensions = [
             const start = range.from;
             let end = range.to;
 
-            tr.insert(start - 1, this.type.create(attributes)).delete(tr.mapping.map(start), tr.mapping.map(end));
+            tr.insert(start - 1, this.type.create(attributes)).delete(
+              tr.mapping.map(start),
+              tr.mapping.map(end)
+            );
           },
         }),
       ];
@@ -91,7 +95,8 @@ export const defaultExtensions = [
   }),
   TiptapLink.configure({
     HTMLAttributes: {
-      class: "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",
+      class:
+        "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",
     },
   }),
   TiptapImage.extend({
@@ -135,7 +140,7 @@ export const defaultExtensions = [
   }),
   TaskItem.configure({
     HTMLAttributes: {
-      class: "crafy-flex crafy-items-start my-4",
+      class: "craft-flex craft-items-start my-4",
     },
     nested: true,
   }),
