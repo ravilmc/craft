@@ -135,7 +135,7 @@ export const defaultExtensions = [
   }),
   TaskItem.configure({
     HTMLAttributes: {
-      class: "flex items-start my-4",
+      class: "crafy-flex crafy-items-start my-4",
     },
     nested: true,
   }),

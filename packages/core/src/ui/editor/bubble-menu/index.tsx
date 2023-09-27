@@ -13,11 +13,9 @@ export interface BubbleMenuItem {
   icon: typeof BoldIcon;
 }
 
-type EditorBubbleMenuProps = Omit<BubbleMenuProps, "children" | "editor">;
+type EditorBubbleMenuProps = Omit<BubbleMenuProps, "children">;
 
 export const EditorBubbleMenu: FC<EditorBubbleMenuProps> = (props) => {
-  const { editor } = useCurrentEditor();
-
   const items: BubbleMenuItem[] = [
     {
       name: "bold",
@@ -83,7 +81,7 @@ export const EditorBubbleMenu: FC<EditorBubbleMenuProps> = (props) => {
   return (
     <BubbleMenu
       {...bubbleMenuProps}
-      className="flex w-fit divide-x divide-stone-200 rounded border border-stone-200 bg-white shadow-xl"
+      className="craft-flex craft-w-fit craft-divide-x craft-divide-stone-200 craft-rounded craft-border craft-border-stone-200 craft-bg-white craft-shadow-xl"
     >
       <NodeSelector
         editor={editor!}
@@ -103,17 +101,17 @@ export const EditorBubbleMenu: FC<EditorBubbleMenuProps> = (props) => {
           setIsNodeSelectorOpen(false);
         }}
       />
-      <div className="flex">
+      <div className="craft-flex">
         {items.map((item, index) => (
           <button
             key={index}
             onClick={item.command}
-            className="p-2 text-stone-600 hover:bg-stone-100 active:bg-stone-200"
+            className="craft-p-2 craft-text-stone-600 hover:craft-bg-stone-100 active:craft-bg-stone-200"
             type="button"
           >
             <item.icon
-              className={cn("h-4 w-4", {
-                "text-blue-500": item.isActive(),
+              className={cn("craft-h-4 craft-w-4", {
+                "craft-text-blue-500": item.isActive(),
               })}
             />
           </button>

@@ -92,20 +92,28 @@ const HIGHLIGHT_COLORS: BubbleColorMenuItem[] = [
   },
 ];
 
-export const ColorSelector: FC<ColorSelectorProps> = ({ editor, isOpen, setIsOpen }) => {
-  const activeColorItem = TEXT_COLORS.find(({ color }) => editor.isActive("textStyle", { color }));
+export const ColorSelector: FC<ColorSelectorProps> = ({
+  editor,
+  isOpen,
+  setIsOpen,
+}) => {
+  const activeColorItem = TEXT_COLORS.find(({ color }) =>
+    editor.isActive("textStyle", { color })
+  );
 
-  const activeHighlightItem = HIGHLIGHT_COLORS.find(({ color }) => editor.isActive("highlight", { color }));
+  const activeHighlightItem = HIGHLIGHT_COLORS.find(({ color }) =>
+    editor.isActive("highlight", { color })
+  );
 
   return (
     <Popover.Root open={isOpen}>
-      <div className="relative h-full">
+      <div className="craft-relative craft-h-full">
         <Popover.Trigger
-          className="flex h-full items-center gap-1 p-2 text-sm font-medium text-stone-600 hover:bg-stone-100 active:bg-stone-200"
+          className="craft-flex craft-h-full craft-items-center craft-gap-1 craft-p-2 craft-text-sm craft-font-medium craft-text-stone-600 hover:craft-bg-stone-100 active:craft-bg-stone-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
-            className="rounded-sm px-1"
+            className="craft-rounded-sm craft-px-1"
             style={{
               color: activeColorItem?.color,
               backgroundColor: activeHighlightItem?.color,
@@ -114,14 +122,16 @@ export const ColorSelector: FC<ColorSelectorProps> = ({ editor, isOpen, setIsOpe
             A
           </span>
 
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown className="craft-h-4 craft-w-4" />
         </Popover.Trigger>
 
         <Popover.Content
           align="start"
-          className="z-[99999] my-1 flex max-h-80 w-48 flex-col overflow-hidden overflow-y-auto rounded border border-stone-200 bg-white p-1 shadow-xl animate-in fade-in slide-in-from-top-1"
+          className="craft-z-[99999] craft-my-1 craft-flex craft-max-h-80 craft-w-48 craft-flex-col craft-overflow-hidden craft-overflow-y-auto craft-rounded craft-border craft-border-stone-200 craft-bg-white craft-p-1 craft-shadow-xl craft-animate-in craft-fade-in craft-slide-in-from-top-1"
         >
-          <div className="my-1 px-2 text-sm text-stone-500">Color</div>
+          <div className="craft-my-1 craft-px-2 craft-text-sm craft-text-stone-500">
+            Color
+          </div>
           {TEXT_COLORS.map(({ name, color }, index) => (
             <button
               key={index}
@@ -135,20 +145,27 @@ export const ColorSelector: FC<ColorSelectorProps> = ({ editor, isOpen, setIsOpe
                     .run();
                 setIsOpen(false);
               }}
-              className="flex items-center justify-between rounded-sm px-2 py-1 text-sm text-stone-600 hover:bg-stone-100"
+              className="craft-flex craft-items-center craft-justify-between craft-rounded-sm craft-px-2 craft-py-1 craft-text-sm craft-text-stone-600 hover:craft-bg-stone-100"
               type="button"
             >
-              <div className="flex items-center space-x-2">
-                <div className="rounded-sm border border-stone-200 px-1 py-px font-medium" style={{ color }}>
+              <div className="craft-flex craft-items-center craft-space-x-2">
+                <div
+                  className="craft-rounded-sm craft-border craft-border-stone-200 craft-px-1 craft-py-px craft-font-medium"
+                  style={{ color }}
+                >
                   A
                 </div>
                 <span>{name}</span>
               </div>
-              {editor.isActive("textStyle", { color }) && <Check className="h-4 w-4" />}
+              {editor.isActive("textStyle", { color }) && (
+                <Check className="craft-h-4 craft-w-4" />
+              )}
             </button>
           ))}
 
-          <div className="mb-1 mt-2 px-2 text-sm text-stone-500">Background</div>
+          <div className="craft-mb-1 craft-mt-2 craft-px-2 craft-text-sm craft-text-stone-500">
+            Background
+          </div>
 
           {HIGHLIGHT_COLORS.map(({ name, color }, index) => (
             <button
@@ -158,19 +175,21 @@ export const ColorSelector: FC<ColorSelectorProps> = ({ editor, isOpen, setIsOpe
                 name !== "Default" && editor.commands.setHighlight({ color });
                 setIsOpen(false);
               }}
-              className="flex items-center justify-between rounded-sm px-2 py-1 text-sm text-stone-600 hover:bg-stone-100"
+              className="craft-flex craft-items-center craft-justify-between craft-rounded-sm craft-px-2 craft-py-1 craft-text-sm craft-text-stone-600 hover:craft-bg-stone-100"
               type="button"
             >
-              <div className="flex items-center space-x-2">
+              <div className="craft-flex craft-items-center craft-space-x-2">
                 <div
-                  className="rounded-sm border border-stone-200 px-1 py-px font-medium"
+                  className="craft-rounded-sm craft-border craft-border-stone-200 craft-px-1 craft-py-px craft-font-medium"
                   style={{ backgroundColor: color }}
                 >
                   A
                 </div>
                 <span>{name}</span>
               </div>
-              {editor.isActive("highlight", { color }) && <Check className="h-4 w-4" />}
+              {editor.isActive("highlight", { color }) && (
+                <Check className="craft-h-4 craft-w-4" />
+              )}
             </button>
           ))}
         </Popover.Content>

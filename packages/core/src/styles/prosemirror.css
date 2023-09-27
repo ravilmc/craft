@@ -1,5 +1,5 @@
 .ProseMirror {
-  @apply p-12 px-8 sm:px-12;
+  @apply craft-p-12 craft-px-8 sm:craft-px-12;
 }
 
 .ProseMirror .is-editor-empty:first-child::before {

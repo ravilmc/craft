@@ -124,7 +124,7 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       searchTerms: ["blockquote"],
       icon: <TextQuote size={18} />,
       command: ({ editor, range }: CommandProps) =>
-        editor.chain().focus().deleteRange(range).toggleNode("paragraph", "paragraph").toggleBlockquote().run(),
+      editor.chain().focus().deleteRange(range).toggleNode("paragraph", "paragraph").toggleBlockquote().run(),
     },
     {
       title: "Code",
@@ -188,8 +188,8 @@ const CommandList = ({ items, command }: { items: CommandItemProps[]; command: a
     (index: number) => {
       const item = items[index];
       if (item) {
-        command(item);
-      }
+          command(item);
+        }
     },
     [command, items]
   );
@@ -238,23 +238,27 @@ const CommandList = ({ items, command }: { items: CommandItemProps[]; command: a
     <div
       id="slash-command"
       ref={commandListContainer}
-      className="z-50 h-auto max-h-[330px] w-72 overflow-y-auto rounded-md border border-stone-200 bg-white px-1 py-2 shadow-md transition-all"
+      className="craft-z-50 craft-h-auto craft-max-h-[330px] craft-w-72 craft-overflow-y-auto craft-rounded-md craft-border craft-border-stone-200 craft-bg-white craft-px-1 craft-py-2 craft-shadow-md craft-transition-all"
     >
       {items.map((item: CommandItemProps, index: number) => {
         return (
           <button
-            className={`flex w-full items-center space-x-2 rounded-md px-2 py-1 text-left text-sm text-stone-900 hover:bg-stone-100 ${
-              index === selectedIndex ? "bg-stone-100 text-stone-900" : ""
+            className={`craft-flex craft-w-full craft-items-center craft-space-x-2 craft-rounded-md craft-px-2 craft-py-1 craft-text-left craft-text-sm craft-text-stone-900 hover:craft-bg-stone-100 ${
+              index === selectedIndex
+                ? "craft-bg-stone-100 craft-text-stone-900"
+                : ""
             }`}
             key={index}
             onClick={() => selectItem(index)}
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-md border border-stone-200 bg-white">
+            <div className="craft-flex craft-h-10 craft-w-10 craft-items-center craft-justify-center craft-rounded-md craft-border craft-border-stone-200 craft-bg-white">
               {item.icon}
             </div>
             <div>
-              <p className="font-medium">{item.title}</p>
-              <p className="text-xs text-stone-500">{item.description}</p>
+              <p className="craft-font-medium">{item.title}</p>
+              <p className="craft-text-xs craft-text-stone-500">
+                {item.description}
+              </p>
             </div>
           </button>
         );
