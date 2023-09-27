@@ -1,6 +1,6 @@
 {
-  "name": "@sergeysova/craft",
-  "version": "0.3.3",
+  "name": "@ravilmc/craft",
+  "version": "0.3.6",
   "publishConfig": {
     "access": "public"
   },
@@ -65,10 +65,10 @@
   "homepage": "https://craft.sova.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sergeysova/craft.git"
+    "url": "git+https://github.com/ravilmc/craft.git"
   },
   "bugs": {
-    "url": "https://github.com/sergeysova/craft/issues"
+    "url": "https://github.com/ravilmc/craft/issues"
   },
   "keywords": [
     "editor",

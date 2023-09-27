@@ -99,7 +99,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@sergeysova/craft':
+      '@ravilmc/craft':
         specifier: workspace:^
         version: link:../../packages/core
     devDependencies:

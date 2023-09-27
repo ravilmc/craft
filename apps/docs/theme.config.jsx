@@ -2,6 +2,6 @@
 export default {
   logo: <span>Craft</span>,
   project: {
-    link: "https://github.com/sergeysova/craft",
+    link: "https://github.com/ravilmc/craft",
   },
 };

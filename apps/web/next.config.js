@@ -4,17 +4,17 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/sergeysova/editor",
+        destination: "https://github.com/ravilmc/editor",
         permanent: true,
       },
       {
         source: "/npm",
-        destination: "https://www.npmjs.com/package/@sergeysova/editor",
+        destination: "https://www.npmjs.com/package/@ravilmc/editor",
         permanent: true,
       },
       {
         source: "/feedback",
-        destination: "https://github.com/sergeysova/editor/issues",
+        destination: "https://github.com/ravilmc/editor/issues",
         permanent: true,
       },
     ];

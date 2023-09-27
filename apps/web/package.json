@@ -1,5 +1,5 @@
 {
-  "name": "@sergeysova/craft-web-app",
+  "name": "@ravilmc/craft-web-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sergeysova/craft": "workspace:^"
+    "@ravilmc/craft": "workspace:^"
   },
   "devDependencies": {
     "tailwind-config": "workspace:*"

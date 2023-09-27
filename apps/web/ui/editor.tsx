@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { CraftEditor } from "../../../packages/core/src/ui/editor/";
+import { CraftEditor, JSONContent } from "@ravilmc/craft/src/index";
 import { defaultEditorContent } from "@/lib/default-content";
 
 export default function Editor() {
-  const [content, setContent] = useState<any>(defaultEditorContent);
+  const [content, setContent] = useState<JSONContent>(defaultEditorContent);
 
   return (
     <div className="relative w-full max-w-screen-lg">

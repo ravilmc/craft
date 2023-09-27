@@ -2,7 +2,7 @@
 
 ## Key Changes:
 
-- **Renamed to `@sergeysova/craft`**: A fresh identity to signify our unique approach.
+- **Renamed to `@ravilmc/craft`**: A fresh identity to signify our unique approach.
 - **Updated Dependencies**: To ensure you're working with the latest and most secure libraries.
 - **Streamlined Default Editor Content**: Removed Novel-specific links for a cleaner user experience.
 - **Disabled Specific Features**: Including the Image block and AI support, to be reintroduced as optional extensions.

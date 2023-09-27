@@ -27,16 +27,16 @@
 
 ## Installation
 
-To use Craft Editor in a project, you can run the following command to install the `@sergeysova/craft` [NPM package](https://www.npmjs.com/package/@sergeysova/craft):
+To use Craft Editor in a project, you can run the following command to install the `@ravilmc/craft` [NPM package](https://www.npmjs.com/package/@ravilmc/craft):
 
 ```
-npm add @sergeysova/craft
+npm add @ravilmc/craft
 ```
 
 Then, you can use it in your code like this:
 
 ```jsx
-import { CraftEditor } from "@sergeysova/craft";
+import { CraftEditor } from "@ravilmc/craft";
 
 export default function App() {
   return <CraftEditor />;
@@ -72,11 +72,11 @@ Novel is built on the following stack:
 
 Here's how you can contribute:
 
-- [Open an issue](https://github.com/sergeysova/craft/issues) if you believe you've encountered a bug.
-- Make a [pull request](https://github.com/sergeysova/craft/pull) to add new features/make quality-of-life improvements/fix bugs.
+- [Open an issue](https://github.com/ravilmc/craft/issues) if you believe you've encountered a bug.
+- Make a [pull request](https://github.com/ravilmc/craft/pull) to add new features/make quality-of-life improvements/fix bugs.
 
-<a href="https://github.com/sergeysova/craft/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=sergeysova/craft" />
+<a href="https://github.com/ravilmc/craft/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ravilmc/craft" />
 </a>
 
 ## Repo Activity
@@ -87,7 +87,7 @@ Here's how you can contribute:
 
 This project is an enhanced version of [Novel](https://github.com/steven-tey/novel), originally created by Steven Tey. I am forked it to introduce additional customization options, all without the constraints of maintaining backward compatibility of Novel.
 
-I am created `@sergeysova/craft` with the aim of offering a more modular and customizable editor experience. My changes include updating dependencies, streamlining the default editor content, and disabling certain features like the Image block and AI support. These features are not gone for good; rather, I am planning to reintroduce them as optional extensions, giving you the freedom to tailor the editor to your needs.
+I am created `@ravilmc/craft` with the aim of offering a more modular and customizable editor experience. My changes include updating dependencies, streamlining the default editor content, and disabling certain features like the Image block and AI support. These features are not gone for good; rather, I am planning to reintroduce them as optional extensions, giving you the freedom to tailor the editor to your needs.
 
 ## Roadmap
 
@@ -102,4 +102,4 @@ By making these changes, we aim to provide a more flexible and user-friendly edi
 
 ## License
 
-Licensed under the [Apache-2.0 license](https://github.com/sergeysova/craft/blob/main/LICENSE.md).
+Licensed under the [Apache-2.0 license](https://github.com/ravilmc/craft/blob/main/LICENSE.md).

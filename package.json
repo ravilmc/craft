@@ -1,5 +1,5 @@
 {
-  "name": "@sergeysova/craft-repo",
+  "name": "@ravilmc/craft-repo",
   "private": true,
   "scripts": {
     "build": "turbo build",

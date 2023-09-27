@@ -15,7 +15,7 @@ export const defaultEditorContent = {
             {
               type: "link",
               attrs: {
-                href: "https://github.com/sergeysova/craft",
+                href: "https://github.com/ravilmc/craft",
                 target: "_blank",
                 class:
                   "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",
@@ -54,7 +54,7 @@ export const defaultEditorContent = {
     {
       type: "codeBlock",
       attrs: { language: null },
-      content: [{ type: "text", text: "npm add @sergeysova/craft" }],
+      content: [{ type: "text", text: "npm add @ravilmc/craft" }],
     },
     {
       type: "heading",
@@ -67,7 +67,7 @@ export const defaultEditorContent = {
       content: [
         {
           type: "text",
-          text: 'import { CraftEditor } from "@sergeysova/craft";\n\nexport default function App() {\n  return (\n     <CraftEditor />\n  )\n}',
+          text: 'import { CraftEditor } from "@ravilmc/craft";\n\nexport default function App() {\n  return (\n     <CraftEditor />\n  )\n}',
         },
       ],
     },
@@ -133,7 +133,7 @@ export const defaultEditorContent = {
                     {
                       type: "link",
                       attrs: {
-                        href: "https://github.com/sergeysova/craft",
+                        href: "https://github.com/ravilmc/craft",
                         target: "_blank",
                         class:
                           "text-stone-400 underline underline-offset-[3px] hover:text-stone-600 transition-colors cursor-pointer",
